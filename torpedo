@@ -107,6 +107,9 @@ Listar los archivos con los permisos
 > cp /produccion/tarea /carpeta_a_mover/
  Devolverte un directorio
 > cd /.
-Tambien sivre este
+Tambien sirve este
 > cd ..
 
+
+Cambiar propietario a un directorio
+> chown usuario_nombre nombre_directorio
