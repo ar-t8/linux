@@ -1,0 +1,112 @@
+Ami 
+Tipo de instancia
+Grupo de seguridad
+Vpc
+
+
+Crontab
+> crontab -e 
+*Se abrirá un archivo que se puede editar y guardar*
+* * * * * comando_a_ejecutar
+
+Donde los cinco asteriscos representan los siguientes campos:
+
+Minuto (0-59)
+Hora (0-23)
+Día del mes (1-31)
+Mes (1-12)
+
+EJEMPLO:
+0 2 * * * mv /home/user/archivo.txt /backup/
+
+Para ayudarse con la fecha y hora de la instancia:
+> Date
+
+
+Al hacer ls -l
+El nombre del directorio define que es
+" d " directorio 
+" l" libreria
+"-" archivo
+Estos pertenecen al primer caracter
+Var -> d rwr|r-x|r-x
+
+4 r read
+2 w write
+1 x execute
+0 - negado
+ Es decir si quiero darle todos los permisos a una carpeta
+d rwxrwxrwx
+ 4 2 1  4 2 1  4 2 1
+  7     7       7
+zAhora si piden dar permisos de ejecucion, o solo lectura, es diferente
+> Crear carpeta 
+Sudo mkdir nombre_carpeta
+ Cambiar permisos
+> Sudo chmod 777 nombre_carpeta
+El primer trio de valores pertenecen a los administradores (owner), 
+al segundo trio como grupos de usuarios, 
+y el tercero a otros usuarios (como invitados)
+ -> whoami 
+
+Para saber que usuario soy
+ Para crear un txt
+> vi nombre_archivo
+Crear un archivo como administrador
+> sudo vi nombre_archivo 
+
+Se abre el archivo para modificar el archivo de texto
+
+Para salir del archivo sin guardar
+> esc + :q! (Presionar luego enter)
+
+Para guardar y salir del archivo
+> esc + :wq (Presionar luego enter)
+
+Para que lea el archivo
+> cat nombre_archivo
+ Mover un archivo 
+> mv nombre_carpeta nombre_archivo
+ Entrar a un directorio
+> cd nombre_carpeta
+
+Regresar al anterior directorio
+> cd ./
+> Cd / 
+> Ls
+> Cd etc/
+> Ls -l
+> vi passwrd
+> nano passwrd
+
+Salir y guardar
+> Esc + : + wq
+Salir sin guardar
+> Esc + + : + q!
+Crear usuario
+> Sudo useradd nombre_usuario_a_crear
+
+Para crearle la contraseña al usuario
+> sudo passwrd nombre_usuario_a_crear
+ El usuario creado queda guardado en el fichero llamado Passwrd, para eso tenemos que abrir el fichero de nuevo y bajar en el mismo archivo para comprobar que el usuario fue creado
+> vi passwrd
+ Para el aechivo el archivo del sistema "shadow". Probablemente no tengamos permisos
+> sudo vi shadow
+
+¡Lo importante es revisar que el usuario este creado!
+Subir al archivo raiz
+> cd /
+Crear carpeta 
+> sudo mkdir nombre-carpeta
+
+Listar los archivos con los permisos
+> ls -l
+ Imprimir archivo por pantalla
+> Cat nombre_archivo_txt
+ Copiar el archivo y moverlo a otra carpeta
+> cp /produccion/tarea /carpeta_a_mover/
+ Devolverte un directorio
+> cd /.
+Tambien sivre este
+> cd ..
+
